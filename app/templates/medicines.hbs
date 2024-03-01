@@ -1,0 +1,11 @@
+<h2>Medicines</h2>
+
+{{!-- {{log this.model}} --}}
+
+{{#each this.model as |medicine|}}
+<MedicineCard @descStyle="italic-desc" @medicine={{medicine}} as |medicine|>
+    {{medicine.description}}
+</MedicineCard>
+{{/each}}
+
+{{outlet}}

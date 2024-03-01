@@ -1,0 +1,8 @@
+<h3>{{medicine.name}}</h3>
+{{yield (hash description=(component this.descStyle desc=medicine.description)) }}
+{{!-- {{!-- <p>{{medicine.description}}</p>  --}}
+<p>{{format-currency medicine.price}}</p>
+<Input @type="number" @name="quantity" @value="0" @min="1" @change={{action 'changeQty'}} />
+<button type="button" onclick={{action 'addCart' medicine}}>Add to Cart</button>
+{{!-- {{!-- <button type="button" onclick={{action 'makeOrder' medicine}}>Order</button>  --}}
+<OrderButton @onOrder={{action 'makeOrder' medicine}} />

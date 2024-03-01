@@ -1,0 +1,17 @@
+<h2>Orders</h2>
+
+{{#unless this.model}}
+<p>Order soon...</p>
+{{else}}
+{{#each this.model as |item|}}
+{{!-- <OrderCard @item={{item}} as |name qty amount|>
+    <h3>{{name}}</h3>
+    <p>Qty: {{qty}}</p>
+    <p>Total Amount: {{format-currency amount}}</p>
+</OrderCard> --}}
+{{component "order-card" item}}
+{{/each}}
+{{/unless}}
+
+
+{{outlet}}

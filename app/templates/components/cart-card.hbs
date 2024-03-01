@@ -1,0 +1,12 @@
+<h3>{{item.medicine.name}}</h3>
+{{!-- <p>Qty: {{item.qty}}</p> --}}
+<p>Qty: 
+        <Input @type="number" @name="qty" @value={{item.qty}} @min="1" />
+        {{#if this.isQtyNotEditable}}
+        <button type="button" onclick={{action 'editQty'}}>Edit</button>
+        {{/if}}
+</p>
+{{!-- <p>Total Amount: {{format-currency item.amount}}</p> --}}
+{{yield}}
+{{!-- <button type="button" onclick={{action 'makeOrder' item}}>Order</button> --}}
+<OrderButton @onOrder={{action 'makeOrder' item}} /> 

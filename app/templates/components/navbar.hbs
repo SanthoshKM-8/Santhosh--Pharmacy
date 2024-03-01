@@ -1,0 +1,20 @@
+<h1>Santhosh Pharmacy</h1>
+
+<div>Welcome, <b>{{welcome-helper}}</b></div>
+
+<div>
+    {{#if this.authentication.isAuthenticated}}
+    <button type="submit" onclick={{action 'userLogout' }}>Logout</button>
+    {{else}}
+    <Input @name="username" @value={{this.authentication.username}} @placeholder="Username" />
+    <button type="submit" onclick={{action 'userLogin' }}>Login</button>
+    {{/if}}
+</div>
+
+<div>
+    <LinkTo @route="home">Home</LinkTo>
+    <LinkTo @route="medicines">Medicines</LinkTo>
+    <LinkTo @route="cart">Cart</LinkTo>
+    <LinkTo @route="orders">Orders</LinkTo>
+    <LinkTo @route="about">About</LinkTo>
+</div>

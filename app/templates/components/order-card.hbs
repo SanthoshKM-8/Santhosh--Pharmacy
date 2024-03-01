@@ -1,0 +1,11 @@
+{{#if (has-block)}}
+
+{{yield @item.medicine.name @item.qty @item.amount}}
+
+{{else}}
+
+<h3>{{item.medicine.name}}</h3>
+<p>Qty: {{item.qty}}</p>
+<p>Total Amount: {{format-currency item.amount}}</p>
+
+{{/if}}

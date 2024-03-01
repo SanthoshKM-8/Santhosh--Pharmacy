@@ -1,0 +1,6 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+body {
+  text-align: center;
+  margin: 0 100px;
+}
