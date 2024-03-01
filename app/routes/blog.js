@@ -1,16 +1,20 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
-    blog_id: null,
-    model(params) {
-        console.log(this.modelFor('blogs'));
-        this.blog_id = params.blog_id;
-    },
+    database: service(),
 
-    renderTemplate() {
-        this.render('blogs/blog', {
-            into: 'blogs', 
-            outlet: "1",
+    model(params) {
+        console.log(params);
+        const blog_id = params.blog_id;
+        let currentBlog;
+        this.database.blogs.forEach(function (blog) {
+            if (blog.id === blog_id) {
+                // console.log(blog);
+                currentBlog = blog
+                return;
+            }
         });
+        return currentBlog;
     }
 });

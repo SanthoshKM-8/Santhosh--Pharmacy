@@ -1,3 +1,4 @@
 <h3>{{this.model.title}}</h3>
 <p>{{this.model.content}}</p>
+<LinkTo @route="blog.comments" @model={{this.model}}>View Comments</LinkTo>
 {{outlet}}
