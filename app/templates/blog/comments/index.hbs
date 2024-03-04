@@ -1,6 +1,6 @@
 {{!-- {{log this.model}} --}}
 {{#each this.model.comments as |comment|}}
-<LinkTo @route="blog.comments.comment" @model={{comment}}>
+<LinkTo @route="blog.comments.comment" @model={{comment.id}}>
 <p><b>{{comment.username}}</b></p>
 </LinkTo>
 {{/each}}

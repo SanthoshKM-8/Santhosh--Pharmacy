@@ -1,14 +1,14 @@
 <h2>Cart</h2>
 
-{{#unless this.model}}
-<p>Your cart is empty</p>
-{{else}}
+{{#if this.model}}
 {{#each this.model as |item|}}
 <CartCard @item={{item}}>
     {{!-- <p>Qty: {{item.qty}}</p> --}}
     <p>Total Amount: {{format-currency item.amount}}</p>
 </CartCard>
 {{/each}}
-{{/unless}}
+{{else}}
+<p>Your cart is empty</p>
+{{/if}}
 
 {{outlet}}

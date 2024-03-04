@@ -1,5 +1,5 @@
 <h2>Blogs</h2>
 {{#each this.model as |blog|}}
-<LinkTo @route="blog" @model={{blog}}><h3>{{blog.title}}</h3></LinkTo>
+<LinkTo @route="blog" @model={{blog.id}}><h3>{{blog.title}}</h3></LinkTo>
 {{/each}}
 {{outlet}}

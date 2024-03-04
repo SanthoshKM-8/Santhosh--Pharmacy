@@ -35,6 +35,7 @@ export default Component.extend({
   },
 
   didRender() {
+    this._super(...arguments);
     // console.log(this.element);
     this.element.querySelector('input').disabled = this.isQtyNotEditable;
   },

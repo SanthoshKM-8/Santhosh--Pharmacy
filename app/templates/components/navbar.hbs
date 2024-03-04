@@ -2,14 +2,14 @@
 
 <div>Welcome, <b>{{welcome-helper}}</b></div>
 
-<div>
+{{!-- <div>
     {{#if this.authentication.isAuthenticated}}
     <button type="submit" onclick={{action 'userLogout' }}>Logout</button>
     {{else}}
-    <Input @name="username" @value={{this.authentication.username}} @placeholder="Username" />
+    <Input @name="username" @value={{this.authentication.username}} placeholder="Username" />
     <button type="submit" onclick={{action 'userLogin' }}>Login</button>
     {{/if}}
-</div>
+</div> --}}
 
 <div>
     <LinkTo @route="home">Home</LinkTo>

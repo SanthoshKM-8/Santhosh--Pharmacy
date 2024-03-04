@@ -1,7 +1,7 @@
 <h3>{{item.medicine.name}}</h3>
 {{!-- <p>Qty: {{item.qty}}</p> --}}
 <p>Qty: 
-        <Input @type="number" @name="qty" @value={{item.qty}} @min="1" />
+        <Input @type="number" name="qty" @value={{item.qty}} min="1" />
         {{#if this.isQtyNotEditable}}
         <button type="button" onclick={{action 'editQty'}}>Edit</button>
         {{/if}}
