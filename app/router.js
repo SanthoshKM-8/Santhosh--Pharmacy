@@ -14,7 +14,7 @@ Router.map(function () {
   this.route('cart');
   this.route('orders');
   this.route('about');
-  this.route('blogs', function () {});
+  this.route('blogs');
   this.route('blog', { path: '/blog/:blog_id' }, function () {
     this.route('comments', function () {
       this.route('index', { path: '/' });
@@ -24,4 +24,6 @@ Router.map(function () {
   });
   this.route('not-found', { path: '/*path' });
   this.route('login');
+  this.route('blogs-loading');
+  this.route('blogs-error');
 });

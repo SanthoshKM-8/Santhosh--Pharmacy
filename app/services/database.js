@@ -20,10 +20,11 @@ export default Service.extend({
   orders: A([]),
   blogs: A([
     {
-      id: '1',
-      title: 'The Santhosh Pharmacy Experience',
+      id: '2',
+      title: 'New Blog',
       content:
         'Explore the world of wellness with Santhosh Pharmacy, your trusted online destination for pharmaceutical needs. Discover a seamless and convenient way to access high-quality medications, enjoy doorstep delivery, and prioritize your well-being. Join us on a journey towards a healthier, happier life.',
+      category: 'new',
       comments: [
         {
           id: '11',
@@ -46,10 +47,11 @@ export default Service.extend({
       ],
     },
     {
-      id: '2',
-      title: 'Your Partner in Wellness',
+      id: '1',
+      title: 'Old Blog',
       content:
         'Step into a world of health and convenience with Santhosh Pharmacy, where your well-being takes center stage. From a diverse range of pharmaceuticals to expert guidance and reliable doorstep delivery, discover the ultimate healthcare experience. Join us on a journey towards a healthier, happier you.',
+      category: 'old',
       comments: [
         {
           id: '21',

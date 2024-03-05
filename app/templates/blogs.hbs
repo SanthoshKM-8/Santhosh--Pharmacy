@@ -1,5 +1,9 @@
 <h2>Blogs</h2>
+<p>FilterBy</p>
+<LinkTo @route="blogs" @query={{hash category='new'}}>New Blogs</LinkTo>
+<LinkTo @route="blogs" @query={{hash category='old'}}>Old Blogs</LinkTo>
 {{#each this.model as |blog|}}
+{{!-- {{log blog}} --}}
 <LinkTo @route="blog" @model={{blog.id}}><h3>{{blog.title}}</h3></LinkTo>
 {{/each}}
 {{outlet}}
