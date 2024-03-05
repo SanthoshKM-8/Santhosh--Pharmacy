@@ -26,6 +26,11 @@ export default Route.extend({
     return this.database.blogs;
   },
 
+  // setupController(controller, error) {
+  //   console.log(error);
+  //   this._super(...arguments);
+  // },
+
   actions: {
     loading(transition) {
       let start = new Date();
