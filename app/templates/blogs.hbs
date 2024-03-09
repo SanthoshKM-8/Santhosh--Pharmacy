@@ -7,6 +7,6 @@
 <LinkTo @route="blogs" @query={{hash category='old'}}>Old Blogs</LinkTo>
 {{#each this.filteredBlogs as |blog|}}
 {{!-- {{log blog}} --}}
-<LinkTo @route="blog" @model={{blog.id}}><h3>{{blog.volumeInfo.title}}</h3></LinkTo>
+<LinkTo @route="blog" @model={{blog.id}}><h3>{{blog.title}}</h3></LinkTo>
 {{/each}}
 {{outlet}}

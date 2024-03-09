@@ -18,12 +18,12 @@ export default Route.extend({
 
   model() {
     // setTimeout("", 1000);
-    return fetch(
-      'https://www.googleapis.com/books/v1/volumes?q=intitle:santhosh&maxResults=10',
-    )
-      .then((response) => response.json())
-      .then((data) => data.items);
-    // return this.database.blogs;
+    // return fetch(
+    //   'https://www.googleapis.com/books/v1/volumes?q=intitle:santhosh&maxResults=10',
+    // )
+    //   .then((response) => response.json())
+    //   .then((data) => data.items);
+    return this.database.blogs;
   },
 
   // setupController(controller, error) {
