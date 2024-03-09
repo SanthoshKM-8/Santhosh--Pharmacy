@@ -22,7 +22,7 @@ export default Route.extend({
       'https://www.googleapis.com/books/v1/volumes?q=intitle:santhosh&maxResults=10',
     )
       .then((response) => response.json())
-      .then((data) => daa.items);
+      .then((data) => data.items);
     // return this.database.blogs;
   },
 

@@ -24,6 +24,5 @@ Router.map(function () {
   });
   this.route('not-found', { path: '/*path' });
   this.route('login');
-  this.route('blogs-loading');
   this.route('blogs-error');
 });

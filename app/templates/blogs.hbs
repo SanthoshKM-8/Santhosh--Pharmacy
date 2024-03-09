@@ -1,9 +1,12 @@
 <h2>Blogs</h2>
 <p>FilterBy</p>
+{{!-- {{log (hash page=1 sort='asc')}} --}}
+{{!-- {{log this.category}}
+{{log this.filteredBlogs}} --}}
 <LinkTo @route="blogs" @query={{hash category='new'}}>New Blogs</LinkTo>
 <LinkTo @route="blogs" @query={{hash category='old'}}>Old Blogs</LinkTo>
-{{#each this.model as |blog|}}
+{{#each this.filteredBlogs as |blog|}}
 {{!-- {{log blog}} --}}
-<LinkTo @route="blog" @model={{blog.id}}><h3>{{blog.title}}</h3></LinkTo>
+<LinkTo @route="blog" @model={{blog.id}}><h3>{{blog.volumeInfo.title}}</h3></LinkTo>
 {{/each}}
 {{outlet}}
